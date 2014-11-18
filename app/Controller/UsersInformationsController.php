@@ -16,7 +16,7 @@ class UsersInformationsController extends AppController {
  public function beforeFilter() {
     parent::beforeFilter();
     // Allow users to register and logout.
-    $this->Auth->allow('add', 'logout');
+    $this->Auth->allow('add');
 }
 
 public function isAuthorized($user) {
@@ -24,6 +24,7 @@ public function isAuthorized($user) {
     if ($this->action === 'add') {
         return true;
     }
+    
 	
 	 return parent::isAuthorized($user);
 	 

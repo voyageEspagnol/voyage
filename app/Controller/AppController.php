@@ -54,10 +54,10 @@ class AppController extends Controller {
         )
     );
 
-    public function beforeFilter() {
+   /* public function beforeFilter() {
         $this->Auth->allow('index', 'view');
     }
-
+*/
     public function isAuthorized($user) {
         // Admin can access every action
         if (isset($user['role']) && $user['role'] === 'admin') {

@@ -1,17 +1,16 @@
 <div class="programmes view">
 <h2><?php echo __('Programme'); ?></h2>
-	<dl>
-		<dt><?php echo __('Id'); ?></dt>
-		<dd>
-			<?php echo h($programme['Programme']['id']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Programme'); ?></dt>
-		<dd>
+	
+		
+		
+<br>
+		
+                    <h3>
 			<?php echo h($programme['Programme']['programme']); ?>
 			&nbsp;
-		</dd>
-	</dl>
+		</h3>
+                
+	
 </div>
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
@@ -29,7 +28,7 @@
 	<?php if (!empty($programme['UsersInformation'])): ?>
 	<table cellpadding = "0" cellspacing = "0">
 	<tr>
-		<th><?php echo __('Id'); ?></th>
+		
 		<th><?php echo __('Numero Da'); ?></th>
 		<th><?php echo __('Pay Id'); ?></th>
 		<th><?php echo __('Programme Id'); ?></th>
@@ -54,9 +53,9 @@
 	</tr>
 	<?php foreach ($programme['UsersInformation'] as $usersInformation): ?>
 		<tr>
-			<td><?php echo $usersInformation['id']; ?></td>
+			
 			<td><?php echo $usersInformation['numero_da']; ?></td>
-			<td><?php echo $usersInformation['pay_id']; ?></td>
+			<td><?php echo $usersInformation['pays_id']; ?></td>
 			<td><?php echo $usersInformation['programme_id']; ?></td>
 			<td><?php echo $usersInformation['voyage_id']; ?></td>
 			<td><?php echo $usersInformation['prenom']; ?></td>
