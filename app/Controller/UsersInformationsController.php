@@ -82,7 +82,7 @@ public function logout() {
 			if ($this->UsersInformation->save($this->request->data)) {
 				$this->Session->setFlash(__('The users information has been saved.'));
 				$d = $this->request->data;
-				$link = "http://" . $_SERVER['HTTP_HOST'] . $this->webroot . "usersinformations/";
+				$link = "http://" . $_SERVER['HTTP_HOST'] . $this->webroot . "usersInformations/";
 				App::uses('CakeEmail', 'Network/Email');
 				$mail = new CakeEmail('gmail');
 				$mail->from('noreply@localhost.com')
@@ -202,7 +202,7 @@ public function logout() {
 		
 		return $this->redirect(array('action' => 'paiement'));
 		$d = $this->request->data;
-				$link = "http://" . $_SERVER['HTTP_HOST'] . $this->webroot . "usersinformations/view/".$id;
+				$link = "http://" . $_SERVER['HTTP_HOST'] . $this->webroot . "usersInformations/view/".$id;
 				App::uses('CakeEmail', 'Network/Email');
 				$mail = new CakeEmail('gmail');
 				$mail->from('noreply@localhost.com')
