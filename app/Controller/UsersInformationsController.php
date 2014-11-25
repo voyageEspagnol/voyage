@@ -198,10 +198,7 @@ public function logout() {
 		$results = $this->UsersInformation->saveField('paiement',1);
 		
 			$this->Session->setFlash(__('Paiement effectuer.'));
-			
-		
-		return $this->redirect(array('action' => 'paiement'));
-		$d = $this->request->data;
+				$d = $this->request->data;
 				$link = "http://" . $_SERVER['HTTP_HOST'] . $this->webroot . "usersInformations/view/".$id;
 				App::uses('CakeEmail', 'Network/Email');
 				$mail = new CakeEmail('gmail');
@@ -210,12 +207,11 @@ public function logout() {
 				     ->subject('Paiement étudiant')
 				     ->emailFormat('html')
 					 ->template('message2')
-					 ->viewVars(array( 'link'=>$link
-										))
-										
-										
-					 
+					 ->viewVars(array( 'link'=>$link))
 					 ->send();
+		
+		return $this->redirect(array('action' => 'paiement'));
+	
 	}
 
 /**
