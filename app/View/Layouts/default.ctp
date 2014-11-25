@@ -39,7 +39,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 <body>
 	<div id="container">
 		<div id="header">
-			<h1><?php echo $this->Html->link($voyage, array('controller' => 'usersinformations', 'action' => 'index')); ?>
+			<h1><?php echo $this->Html->link($voyage, array('controller' => 'usersInformations', 'action' => 'index')); ?>
                        
                         <div class="collapse navbar-right navbar-right">
                         <ul class="nav navbar-right">
@@ -59,7 +59,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 			else{
 			echo $this->Html->link(__('Connection'), array('controller' => 'users', 'action' => 'login'));
 			echo '</li><li>';
-			echo $this->Html->link(__('Inscription'), array('controller' => 'usersinformations', 'action' => 'add'));
+			echo $this->Html->link(__('Inscription'), array('controller' => 'usersInformations', 'action' => 'add'));
 			}
 			?>
 			</li>
