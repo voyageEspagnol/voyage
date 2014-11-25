@@ -5,6 +5,17 @@
 
 class DATABASE_CONFIG {
 
+/*public $default = array(
+		'datasource' => 'Database/Mysql',
+		'persistent' => false,
+		'host' => 'localhost',
+		'login' => 'root',
+		'password' => 'mysql',
+		'database' => 'voyage',
+		'prefix' => '',
+		'encoding' => 'utf8'
+	);
+	*/
         public $default = array(
         'datasource' => 'Database/Sqlite',
         'persistent' => false,

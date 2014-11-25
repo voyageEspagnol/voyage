@@ -20,30 +20,13 @@
 		echo $this->Form->input('cellulaire');
 		echo $this->Form->input('courriel');
 		echo $this->Form->input('session');
+		echo "entrer 1 pour oui et 0 pour non.";
 		echo $this->Form->input('cours_espagnol');
+		
 		echo $this->Form->input('cours_espagnol_precise');
                 ?>
                                       
-                                            <div class="form-group">
-                                                <?php
-                                         $rand = rand(0,999);
-                                         if ($rand<10){
-                                             $rand = "00"+$rand;
-                                         }else if ($rand<100){
-                                             $rand = "0"+$rand;
-                                         }
-					 
-					 echo "Veuillez entrer ce chiffre : $rand ";
-					?>
-                                                <input type="text" name="random" value="$rand" required="required"> 
-                                                 
-					</div><!-- .form-group -->
-                                        <?php
-                                        
-                                        
-                $guid = com_create_guid();
-                echo $guid;
-	?>
+                                           
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>
 </div>

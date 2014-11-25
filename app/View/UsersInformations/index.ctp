@@ -3,7 +3,6 @@
 	<table cellpadding="0" cellspacing="0">
 	<thead>
 	<tr>
-			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('numero_da'); ?></th>
 			<th><?php echo $this->Paginator->sort('pay_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('programme_id'); ?></th>
@@ -30,7 +29,6 @@
 	<tbody>
 	<?php foreach ($usersInformations as $usersInformation): ?>
 	<tr>
-		<td><?php echo h($usersInformation['UsersInformation']['id']); ?>&nbsp;</td>
 		<td><?php echo h($usersInformation['UsersInformation']['numero_da']); ?>&nbsp;</td>
 		<td><?php echo h($usersInformation['UsersInformation']['pays_id']); ?>&nbsp;</td>
 		<td>
@@ -52,9 +50,15 @@
 		<td><?php echo h($usersInformation['UsersInformation']['cellulaire']); ?>&nbsp;</td>
 		<td><?php echo h($usersInformation['UsersInformation']['courriel']); ?>&nbsp;</td>
 		<td><?php echo h($usersInformation['UsersInformation']['session']); ?>&nbsp;</td>
-		<td><?php echo h($usersInformation['UsersInformation']['cours_espagnol']); ?>&nbsp;</td>
+		<td><?php if($usersInformation['UsersInformation']['cours_espagnol'] == 1 ){
+		echo "oui" ;
+		}else{  
+		echo "non"; } ?>&nbsp;</td>
 		<td><?php echo h($usersInformation['UsersInformation']['cours_espagnol_precise']); ?>&nbsp;</td>
-		<td><?php echo h($usersInformation['UsersInformation']['paiement']); ?>&nbsp;</td>
+		<td><?php if($usersInformation['UsersInformation']['paiement'] == 1 ){
+		echo "payé" ;
+		}else{  
+		echo "non payé"; } ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $usersInformation['UsersInformation']['id'])); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $usersInformation['UsersInformation']['id'])); ?>

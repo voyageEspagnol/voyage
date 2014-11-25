@@ -1,7 +1,6 @@
 <?php
 // app/Controller/UsersController.php
 App::uses('AppController', 'Controller');
-
 class UsersController extends AppController {
 
 public function beforeFilter() {
@@ -49,9 +48,8 @@ public function logout() {
     public function add() {
         if ($this->request->is('post')) {
             $this->User->create();
-	/*		if ($_POST('random') != $_POST['Captcha']) {
-				$this->Session->setFlash(__('Catpcha INVALIDE, Ré-Entrez en un.'), 'flash/error');
-				}else */if ($this->User->save($this->request->data)) {
+
+			if ($this->User->save($this->request->data)) {
                 $this->Session->setFlash(__('The user has been saved'));
                 return $this->redirect(array('controller' => 'voyages', 'action' => 'index'));
             }

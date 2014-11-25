@@ -88,9 +88,10 @@
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Cours Espagnol'); ?></dt>
-		<dd>
-			<?php echo h($usersInformation['UsersInformation']['cours_espagnol']); ?>
-			&nbsp;
+		<dd><td><?php if($usersInformation['UsersInformation']['cours_espagnol'] == 1 ){
+		echo "oui" ;
+		}else{  
+		echo "non "; } ?>&nbsp;</td>
 		</dd>
 		<dt><?php echo __('Espagnol Precise'); ?></dt>
 		<dd>
@@ -99,8 +100,11 @@
 		</dd>
 		<dt><?php echo __('Paiement'); ?></dt>
 		<dd>
-			<?php echo h($usersInformation['UsersInformation']['paiement']); ?>
-			&nbsp;
+		<td><?php if($usersInformation['UsersInformation']['paiement'] == 1 ){
+		echo "payé" ;
+		}else{  
+		echo "non payé"; } ?>&nbsp;</td>
+			
 		</dd>
 	</dl>
 </div>
